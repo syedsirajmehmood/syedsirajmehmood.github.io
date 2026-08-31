@@ -472,6 +472,62 @@
         section {
             animation: fadeUp 0.6s ease-out both;
         }
+
+        /* === SKILLS === */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .skill-category:hover {
+            border-color: rgba(79, 143, 255, 0.3);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .skill-category-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .skill-badge:hover {
+            background: rgba(79, 143, 255, 0.1);
+            border-color: rgba(79, 143, 255, 0.4);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -511,6 +567,65 @@
                 <a href="mailto:syed@syedsirajmehmood.com" class="hero-link">Contact</a>
             </div>
         </header>
+
+        <!-- SKILLS / EXPERTISE -->
+        <section id="skills">
+            <div class="section-title">Technical Expertise</div>
+            
+            <div class="skills-grid">
+                <!-- Cloud Data Platforms -->
+                <div class="skill-category">
+                    <div class="skill-category-title">☁️ Cloud Data Platforms</div>
+                    <div class="skill-list">
+                        <span class="skill-badge">Snowflake</span>
+                        <span class="skill-badge">Databricks</span>
+                        <span class="skill-badge">ClickHouse</span>
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">Delta Sharing</span>
+                        <span class="skill-badge">Snowpark</span>
+                    </div>
+                </div>
+
+                <!-- Languages & Frameworks -->
+                <div class="skill-category">
+                    <div class="skill-category-title">💻 Languages & Frameworks</div>
+                    <div class="skill-list">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">JavaScript / TypeScript</span>
+                        <span class="skill-badge">Go</span>
+                        <span class="skill-badge">SQL</span>
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">Node.js</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure & Architecture -->
+                <div class="skill-category">
+                    <div class="skill-category-title">🏗️ Infrastructure & Architecture</div>
+                    <div class="skill-list">
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">CI/CD Pipeline Design</span>
+                        <span class="skill-badge">Serverless Architectures</span>
+                        <span class="skill-badge">Distributed Systems</span>
+                        <span class="skill-badge">Medallion Architecture</span>
+                    </div>
+                </div>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-category">
+                    <div class="skill-category-title">🤖 AI & Data Engineering</div>
+                    <div class="skill-list">
+                        <span class="skill-badge">LLM Guardrails</span>
+                        <span class="skill-badge">Semantic Caching</span>
+                        <span class="skill-badge">Vector Databases</span>
+                        <span class="skill-badge">dbt</span>
+                        <span class="skill-badge">Airbyte</span>
+                        <span class="skill-badge">Real-time Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- PATENTS -->
         <section id="patents">
