@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Siraj Mehmood — Senior Software Engineer, Inventor & IEEE Senior Member</title>
+    <meta name="description" content="Syed Siraj Mehmood is a Senior Software Engineer at Capital One, inventor of 3 U.S. patents, IEEE Senior Member, and published author with 13+ works on Google Scholar. Expertise in cloud data platforms, AI systems, and enterprise architecture.">
+    <meta name="keywords" content="Syed Siraj Mehmood, software engineer, patents, IEEE Senior Member, Capital One, Snowflake, Databricks, ClickHouse, cloud data engineering, AI safety, enterprise architecture">
+    <meta name="author" content="Syed Siraj Mehmood">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://syedsirajmehmood.com">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Syed Siraj Mehmood — Senior Software Engineer, Inventor & IEEE Senior Member">
+    <meta property="og:description" content="3x U.S. Patent Inventor | 13+ Publications on Google Scholar | IEEE Senior Member | Speaker at Databricks Data + AI Summit">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://syedsirajmehmood.com">
+    <meta property="og:site_name" content="Syed Siraj Mehmood">
+    <meta property="profile:first_name" content="Syed Siraj">
+    <meta property="profile:last_name" content="Mehmood">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Syed Siraj Mehmood — Senior Software Engineer & Inventor">
+    <meta name="twitter:description" content="3x U.S. Patent Inventor | IEEE Senior Member | 13+ Google Scholar Publications | Enterprise Cloud & AI Architecture">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Syed Siraj Mehmood",
+        "givenName": "Syed Siraj",
+        "familyName": "Mehmood",
+        "url": "https://syedsirajmehmood.com",
+        "jobTitle": "Senior Software Engineer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Capital One",
+            "url": "https://www.capitalone.com"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "MS Ramaiah Institute of Technology"
+        },
+        "memberOf": {
+            "@type": "Organization",
+            "name": "IEEE",
+            "description": "Senior Member"
+        },
+        "knowsAbout": ["Cloud Data Engineering", "Enterprise Architecture", "Snowflake", "Databricks", "ClickHouse", "AI Safety", "Machine Learning", "Distributed Systems"],
+        "sameAs": [
+            "https://www.linkedin.com/in/saifsysim3101/",
+            "https://github.com/saifsysim",
+            "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID",
+            "https://dzone.com/users/YOUR_DZONE_ID",
+            "https://dev.to/siraj_syed_a122e4986ce967",
+            "https://medium.com/@symehmoo"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Intelligent Cloud Resource Recommendation Engine",
+            "author": { "@type": "Person", "name": "Syed Siraj Mehmood" },
+            "identifier": "US12189645B2",
+            "url": "https://patents.google.com/patent/US12189645B2",
+            "description": "System for automated optimization of cloud data warehousing environments, analyzing tens of thousands of compute instances to identify cost optimization and governance opportunities at scale."
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Automatic Detection of Unmanaged Cloud Resources",
+            "author": { "@type": "Person", "name": "Syed Siraj Mehmood" },
+            "identifier": "US12019648B2",
+            "url": "https://patents.google.com/patent/US12019648B2",
+            "description": "Automated detection and classification system for orphaned, untagged, and shadow cloud infrastructure representing cost waste and security risk."
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "name": "Generic Serverless Performance Testing Framework",
+            "author": { "@type": "Person", "name": "Syed Siraj Mehmood" },
+            "identifier": "US10769058B1",
+            "url": "https://patents.google.com/patent/US10769058B1",
+            "description": "Cloud-native, dynamically assigned automated test execution architecture for rigorous performance and load testing at scale."
+        }
+    ]
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-card: #16161f;
+            --bg-card-hover: #1c1c28;
+            --text-primary: #f0f0f5;
+            --text-secondary: #9898a8;
+            --text-muted: #6b6b7d;
+            --accent-blue: #4f8fff;
+            --accent-purple: #8b5cf6;
+            --accent-teal: #2dd4bf;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --border: #2a2a3a;
+            --radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Subtle grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                linear-gradient(rgba(79, 143, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 143, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* === HERO === */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(79, 143, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(79, 143, 255, 0.1);
+            border: 1px solid rgba(79, 143, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 24px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .stat-number.blue { color: var(--accent-blue); }
+        .stat-number.purple { color: var(--accent-purple); }
+        .stat-number.teal { color: var(--accent-teal); }
+        .stat-number.amber { color: var(--accent-amber); }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .hero-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            background: var(--bg-card);
+        }
+
+        .hero-link:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+        }
+
+        /* === SECTIONS === */
+        section {
+            padding: 48px 0;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-blue);
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--border), transparent);
+        }
+
+        /* === CARDS === */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 12px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(79, 143, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 12px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .card-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .card-title a:hover {
+            color: var(--accent-blue);
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .tag-patent { background: rgba(139, 92, 246, 0.15); color: var(--accent-purple); }
+        .tag-publication { background: rgba(45, 212, 191, 0.15); color: var(--accent-teal); }
+        .tag-talk { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); }
+        .tag-oss { background: rgba(244, 63, 94, 0.15); color: var(--accent-rose); }
+
+        .card-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 6px;
+        }
+
+        .card-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .citation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--accent-amber);
+            background: rgba(245, 158, 11, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        /* === EXPERIENCE TIMELINE === */
+        .exp-item {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .exp-item:last-child { border-bottom: none; }
+
+        .exp-period {
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+            padding-top: 3px;
+        }
+
+        .exp-role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .exp-company {
+            font-size: 0.88rem;
+            color: var(--accent-blue);
+            margin-bottom: 6px;
+        }
+
+        .exp-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* === COMMUNITY === */
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .community-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px;
+            transition: var(--transition);
+        }
+
+        .community-item:hover {
+            border-color: rgba(79, 143, 255, 0.3);
+        }
+
+        .community-role {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .community-org {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 48px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            margin-top: 32px;
+        }
+
+        footer p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 640px) {
+            .hero { padding: 48px 0 40px; }
+            .hero-stats { gap: 20px; }
+            .stat-number { font-size: 1.5rem; }
+            .exp-item { grid-template-columns: 1fr; gap: 4px; }
+            .card { padding: 18px; }
+        }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Fade-in animation */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeUp 0.6s ease-out both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <header class="hero">
+            <div class="hero-badge">⚡ IEEE Senior Member</div>
+            <h1>Syed Siraj Mehmood</h1>
+            <p class="hero-subtitle">Senior Software Engineer at Capital One. Inventor. Published author. Building enterprise cloud data platforms, AI systems, and optimization intelligence at scale.</p>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number blue">3</div>
+                    <div class="stat-label">U.S. Patents</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number purple">13+</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number teal">7</div>
+                    <div class="stat-label">Patent Citations</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number amber">50+</div>
+                    <div class="stat-label">Enterprise Customers</div>
+                </div>
+            </div>
+
+            <div class="hero-links">
+                <a href="https://www.linkedin.com/in/saifsysim3101/" class="hero-link" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/saifsysim" class="hero-link" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="hero-link" target="_blank" rel="noopener">Google Scholar</a>
+                <a href="https://patents.google.com/?inventor=Syed+Siraj+Mehmood" class="hero-link" target="_blank" rel="noopener">Patents</a>
+                <a href="https://dev.to/siraj_syed_a122e4986ce967" class="hero-link" target="_blank" rel="noopener">DEV.to</a>
+                <a href="https://medium.com/@symehmoo" class="hero-link" target="_blank" rel="noopener">Medium</a>
+                <a href="mailto:syed@syedsirajmehmood.com" class="hero-link">Contact</a>
+            </div>
+        </header>
+
+        <!-- PATENTS -->
+        <section id="patents">
+            <div class="section-title">Granted U.S. Patents</div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://patents.google.com/patent/US12189645B2" target="_blank" rel="noopener">Intelligent Cloud Resource Recommendation Engine</a></div>
+                    <span class="card-tag tag-patent">Patent</span>
+                </div>
+                <div class="card-meta">US12189645B2 · Granted 2025 · Assigned to Capital One Services</div>
+                <div class="card-desc">System for automated optimization of cloud data warehousing environments. Analyzes tens of thousands of compute instances, storage buckets, and data warehouse clusters to identify cost optimization and governance opportunities at scale. Active production component of Slingshot, serving 50+ enterprise customers.</div>
+                <div class="citation-badge">★ Cited as prior art by subsequent patent filers</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://patents.google.com/patent/US12019648B2" target="_blank" rel="noopener">Automatic Detection of Unmanaged Cloud Resources</a></div>
+                    <span class="card-tag tag-patent">Patent</span>
+                </div>
+                <div class="card-meta">US12019648B2 · Granted 2024 · Assigned to Capital One Services</div>
+                <div class="card-desc">Automated detection and classification system for orphaned, untagged, and shadow cloud infrastructure representing cost waste and security risk. Surfaces hidden resources across enterprise cloud environments systematically.</div>
+                <div class="citation-badge">★ Cited as prior art by subsequent patent filers</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://patents.google.com/patent/US10769058B1" target="_blank" rel="noopener">Generic Serverless Performance Testing Framework</a></div>
+                    <span class="card-tag tag-patent">Patent</span>
+                </div>
+                <div class="card-meta">US10769058B1 · Granted 2020 · Assigned to Capital One Services</div>
+                <div class="card-desc">Cloud-native, dynamically assigned automated test execution architecture enabling rigorous performance and load testing at scale without dedicated load-generation infrastructure.</div>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <div class="section-title">Selected Publications</div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Enterprise AI Safety: Production-Grade LLM Guardrail Architecture</div>
+                    <span class="card-tag tag-publication">Article</span>
+                </div>
+                <div class="card-meta">Capital One Tech Blog · 2024</div>
+                <div class="card-desc">Architectural design of a production guardrail engine using specialized smaller models for prompt injection detection, PII redaction, hallucination checking, and vector database semantic caching for adversarial pattern blocking.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Large-Scale Databricks Pipeline Optimization: 85% Runtime Reduction</div>
+                    <span class="card-tag tag-publication">Article</span>
+                </div>
+                <div class="card-meta">Published 2024 · Indexed on Google Scholar</div>
+                <div class="card-desc">Redesigned a 500-million-record daily data pipeline, reducing runtime by 85% and cloud compute costs by 74% through systematic diagnosis of full table scans, disabled Adaptive Query Execution, and Delta file accumulation.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://dzone.com/users/YOUR_DZONE_ID" target="_blank" rel="noopener">Medallion Architecture With ClickHouse</a></div>
+                    <span class="card-tag tag-publication">DZone</span>
+                </div>
+                <div class="card-meta">DZone · May 2025</div>
+                <div class="card-desc">How the medallion architecture (Bronze, Silver, Gold layers) can streamline data pipelines and enhance real-time analytics when paired with ClickHouse for high-performance OLAP workloads.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Databricks Asset Bundles: CI/CD for Enterprise Data Pipelines</div>
+                    <span class="card-tag tag-publication">Article</span>
+                </div>
+                <div class="card-meta">Published 2024 · Indexed on Google Scholar</div>
+                <div class="card-desc">Infrastructure-as-code approach replacing manual notebook workflows with version-controlled, CI/CD-integrated deployment pipelines for enterprise Databricks environments.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/part-3-exposing-clickhouse-as-an-embeddable-analytics-api-with-access-control-and-cost-1i54" target="_blank" rel="noopener">Exposing ClickHouse as an Embeddable Analytics API — With Access Control and Cost Attribution</a></div>
+                    <span class="card-tag tag-publication">DEV.to</span>
+                </div>
+                <div class="card-meta">DEV.to · August 2026 · Part 3 of Series</div>
+                <div class="card-desc">Designing an analytics API layer on top of ClickHouse with fine-grained access control and cost attribution for multi-tenant enterprise environments.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/part-2-syncing-normalized-postgresql-data-to-denormalized-clickhouse-using-airbyte-dbt-2hic" target="_blank" rel="noopener">Syncing Normalized PostgreSQL Data to Denormalized ClickHouse Using Airbyte + DBT</a></div>
+                    <span class="card-tag tag-publication">DEV.to</span>
+                </div>
+                <div class="card-meta">DEV.to · May 2025 · Part 2 of Series</div>
+                <div class="card-desc">Production pipeline architecture for syncing normalized PostgreSQL data to denormalized ClickHouse schemas using Airbyte for ingestion and dbt for transformation.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/designing-data-models-that-work-for-both-postgresql-and-clickhouse-a-developers-guide-3e4d" target="_blank" rel="noopener">Designing Data Models for Both PostgreSQL and ClickHouse</a></div>
+                    <span class="card-tag tag-publication">DEV.to</span>
+                </div>
+                <div class="card-meta">DEV.to · May 2025 · Part 1 of Series</div>
+                <div class="card-desc">Developer guide to designing data models that work across both OLTP (PostgreSQL) and OLAP (ClickHouse) paradigms for modern data architectures.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Multi-Cluster Networking With Kubernetes and Docker</div>
+                    <span class="card-tag tag-publication">DZone</span>
+                </div>
+                <div class="card-meta">DZone · June 2025</div>
+                <div class="card-desc">Networking challenges and solutions within multi-cluster Kubernetes and Docker environments for distributed enterprise systems.</div>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+                <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="hero-link" target="_blank" rel="noopener">Google Scholar →</a>
+                <a href="https://dev.to/siraj_syed_a122e4986ce967" class="hero-link" target="_blank" rel="noopener">DEV.to →</a>
+                <a href="https://medium.com/@symehmoo" class="hero-link" target="_blank" rel="noopener">Medium →</a>
+            </div>
+        </section>
+
+        <!-- SPEAKING -->
+        <section id="speaking">
+            <div class="section-title">Invited Speaking</div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Databricks Data + AI Summit</div>
+                    <span class="card-tag tag-talk">Invited Speaker</span>
+                </div>
+                <div class="card-meta">15,000+ attendees · One of the largest data engineering conferences globally</div>
+                <div class="card-desc">Invited to present on enterprise data pipeline optimization and Delta Share architecture at Databricks' flagship annual conference.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">ClickHouse Open House — New York City</div>
+                    <span class="card-tag tag-talk">Invited Speaker</span>
+                </div>
+                <div class="card-meta">New York City · Industry conference</div>
+                <div class="card-desc">Presented on Medallion Architecture implementation with ClickHouse for real-time enterprise analytics at scale.</div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="exp-item">
+                <div class="exp-period">2021 — Present</div>
+                <div>
+                    <div class="exp-role">Senior Software Engineer & Lead Architect</div>
+                    <div class="exp-company">Capital One Software (Slingshot)</div>
+                    <div class="exp-desc">Lead architect for enterprise data observability and cloud cost optimization platform. Built Snowflake and Databricks optimization engines, Native Apps framework, and Delta Sharing architecture serving 50+ enterprise customers including Fortune 500 organizations.</div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-period">2020 — 2021</div>
+                <div>
+                    <div class="exp-role">Senior Software Engineer</div>
+                    <div class="exp-company">Capital One</div>
+                    <div class="exp-desc">Enterprise cloud platform engineering and infrastructure automation.</div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-period">2017 — 2020</div>
+                <div>
+                    <div class="exp-role">Software Engineer</div>
+                    <div class="exp-company">Capital One</div>
+                    <div class="exp-desc">Developed PERFOPS unified testing platform. Granted US10769058B1 (serverless performance testing framework).</div>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-period">Prior</div>
+                <div>
+                    <div class="exp-role">Software Engineer</div>
+                    <div class="exp-company">Wipro Technologies · PNC Financial Services</div>
+                    <div class="exp-desc">Enterprise software engineering for major financial institutions.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OPEN SOURCE -->
+        <section id="opensource">
+            <div class="section-title">Open Source & Projects</div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/syedsirajmehmood/guardrail-mvp" target="_blank" rel="noopener">Guardrail — AI Escalation Intelligence Layer</a></div>
+                    <span class="card-tag tag-oss">Open Source</span>
+                </div>
+                <div class="card-desc">An API layer that sits between AI models and users. It scores responses in real-time and routes them to deliver, flag for review, or block and escalate to humans based on intelligence and safety criteria.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/syedsirajmehmood/clickhouse-0-hero" target="_blank" rel="noopener">ClickHouse 0 to Hero 🚀</a></div>
+                    <span class="card-tag tag-oss">Open Source</span>
+                </div>
+                <div class="card-desc">A complete, interactive demo and learning guide of ClickHouse for developers. Covers major table engines, real production use cases with live data & charts, and an interactive "13 Mistakes" learning guide.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/syedsirajmehmood/dataql" target="_blank" rel="noopener">⚡ DataQL</a></div>
+                    <span class="card-tag tag-oss">Open Source</span>
+                </div>
+                <div class="card-desc">An AI-powered natural language query engine that connects to databases, Gmail, Google Sheets, and 20+ other sources, allowing users to ask questions and get answers from any data source.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/syedsirajmehmood/ai-mlops-local" target="_blank" rel="noopener">🧠 AI MLOps Local</a></div>
+                    <span class="card-tag tag-oss">Open Source</span>
+                </div>
+                <div class="card-desc">A hands-on, practical guide and project for learning AI engineering and MLOps from scratch. Build and run real AI systems and pipelines locally on your machine.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/syedsirajmehmood/mcp-github-agent" target="_blank" rel="noopener">MCP GitHub Agent</a></div>
+                    <span class="card-tag tag-oss">Open Source</span>
+                </div>
+                <div class="card-desc">An intelligent agent built to interact with GitHub leveraging the Model Context Protocol (MCP) to automate repository management, workflows, and developer operations.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title"><a href="https://github.com/saifsysim" target="_blank" rel="noopener">WiseUp</a></div>
+                    <span class="card-tag tag-oss">Mobile App</span>
+                </div>
+                <div class="card-desc">Open-source mobile application. Available on GitHub.</div>
+            </div>
+
+            <p style="text-align: center; margin-top: 16px;">
+                <a href="https://github.com/syedsirajmehmood" class="hero-link" target="_blank" rel="noopener">View all repositories on GitHub →</a>
+            </p>
+        </section>
+
+        <!-- COMMUNITY -->
+        <section id="community">
+            <div class="section-title">Community & Mentorship</div>
+
+            <div class="community-grid">
+                <div class="community-item">
+                    <div class="community-role">IEEE Senior Member</div>
+                    <div class="community-org">Institute of Electrical and Electronics Engineers</div>
+                </div>
+                <div class="community-item">
+                    <div class="community-role">Science Fair Judge</div>
+                    <div class="community-org">LCPS Regional Science & Engineering Fair (ISEF-affiliated)</div>
+                </div>
+                <div class="community-item">
+                    <div class="community-role">Technical Mentor</div>
+                    <div class="community-org">CodePath — Technology education for underrepresented students</div>
+                </div>
+                <div class="community-item">
+                    <div class="community-role">Hackathon Judge</div>
+                    <div class="community-org">HackFax — George Mason University</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Syed Siraj Mehmood · <a href="mailto:syed@syedsirajmehmood.com">syed@syedsirajmehmood.com</a></p>
+            <p style="margin-top: 8px;"><a href="https://www.linkedin.com/in/saifsysim3101/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/saifsysim" target="_blank" rel="noopener">GitHub</a> · <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://dev.to/siraj_syed_a122e4986ce967" target="_blank" rel="noopener">DEV.to</a> · <a href="https://medium.com/@symehmoo" target="_blank" rel="noopener">Medium</a></p>
+            <p style="margin-top: 8px; font-size: 0.75rem;">© 2025 Syed Siraj Mehmood. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
