@@ -549,15 +549,99 @@
             color: var(--text-primary);
             transform: translateY(-2px);
         }
+        /* === NEW DYNAMIC UI === */
+        .nav-glass {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 64px;
+            background: rgba(10, 10, 15, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+            color: var(--accent-blue);
+        }
+
+        /* Orbs */
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            z-index: -1;
+            animation: float 10s infinite ease-in-out alternate;
+            pointer-events: none;
+        }
+
+        .orb-1 {
+            width: 400px; height: 400px;
+            background: rgba(79, 143, 255, 0.3);
+            top: -100px; left: -100px;
+        }
+
+        .orb-2 {
+            width: 300px; height: 300px;
+            background: rgba(139, 92, 246, 0.3);
+            bottom: -50px; right: -50px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 50px); }
+        }
+
+        /* Staggered Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <nav class="nav-glass">
+        <div class="nav-links">
+            <a href="#skills" class="nav-link">Expertise</a>
+            <a href="#patents" class="nav-link">Patents</a>
+            <a href="#publications" class="nav-link">Publications</a>
+            <a href="#experience" class="nav-link">Experience</a>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 80px;">
         <!-- HERO -->
         <header class="hero">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
             <div class="hero-badge">⚡ IEEE Senior Member</div>
             <h1>Syed Siraj Mehmood</h1>
-            <p class="hero-subtitle">Senior Software Engineer at Capital One. Technologist. Open Source & AI Enthusiast. Inventor. Published author. Building enterprise cloud data platforms, AI systems, and optimization intelligence at scale.</p>
+            <p class="hero-subtitle">Director of Software, Lead Engineer & Application Architect at Capital One. Technologist. Open Source & AI Enthusiast. Inventor. Published author. Building enterprise cloud data platforms, AI systems, and optimization intelligence at scale.</p>
 
             <div class="hero-stats">
                 <div class="stat">
@@ -795,7 +879,7 @@
             <div class="exp-item">
                 <div class="exp-period">2021 — Present</div>
                 <div>
-                    <div class="exp-role">Senior Software Engineer & Lead Architect</div>
+                    <div class="exp-role">Director of Software, Lead Engineer, Application Architect</div>
                     <div class="exp-company">Capital One Software (Slingshot)</div>
                     <div class="exp-desc">Lead architect for enterprise data observability and cloud cost optimization platform. Built Snowflake and Databricks optimization engines, Native Apps framework, and Delta Sharing architecture serving 50+ enterprise customers including Fortune 500 organizations.</div>
                 </div>
@@ -917,5 +1001,33 @@
             <p style="margin-top: 8px; font-size: 0.75rem;">© 2025 Syed Siraj Mehmood. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        // Dynamically add the reveal class to cards and items
+        document.querySelectorAll('.card, .exp-item, .skill-category').forEach(el => {
+            el.classList.add('reveal');
+        });
+
+        // Intersection Observer for Staggered Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger the animation slightly
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
 </body>
 </html>
