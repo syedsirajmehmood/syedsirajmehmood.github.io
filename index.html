@@ -623,6 +623,71 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Publication Grid */
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .platform-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .platform-box:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .platform-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .platform-title.medium-title { color: var(--text-primary); }
+        .platform-title.devto-title { color: var(--text-primary); }
+        .platform-title.dzone-title { color: var(--accent-blue); }
+
+        .article-link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .article-link-list li {
+            margin-bottom: 16px;
+        }
+
+        .article-link-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            display: inline-block;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .article-link:hover {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+        }
     </style>
 </head>
 <body>
@@ -796,95 +861,44 @@
         <section id="publications">
             <div class="section-title">Selected Publications</div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://medium.com/@sirajsyed/level-up-your-full-stack-game-building-scalable-apps-with-a-monorepo-12345" target="_blank" rel="noopener">Level Up Your Full-Stack Game: Building Scalable Apps with a Monorepo</a></div>
-                    <span class="card-tag tag-publication">Medium</span>
+            <div class="publication-grid">
+                <!-- Medium Box -->
+                <div class="platform-box">
+                    <div class="platform-title medium-title">
+                        Medium
+                    </div>
+                    <ul class="article-link-list">
+                        <li><a href="https://medium.com/@sirajsyed/level-up-your-full-stack-game-building-scalable-apps-with-a-monorepo-12345" class="article-link" target="_blank" rel="noopener">Level Up Your Full-Stack Game: Building Scalable Apps with a Monorepo</a></li>
+                        <li><a href="https://medium.com/@sirajsyed/simplifying-access-control-in-data-visualization-platforms-with-openfga-12345" class="article-link" target="_blank" rel="noopener">Simplifying Access Control in Data Visualization Platforms with OpenFGA</a></li>
+                        <li><a href="https://medium.com/@sirajsyed/how-to-manage-a-high-performer-without-holding-them-back-12345" class="article-link" target="_blank" rel="noopener">How to Manage a High Performer Without Holding Them Back</a></li>
+                        <li><a href="https://medium.com/@sirajsyed/is-computer-science-still-the-future-rethinking-careers-in-the-age-12345" class="article-link" target="_blank" rel="noopener">Is Computer Science Still the Future? Rethinking Careers in the Age of AI</a></li>
+                    </ul>
                 </div>
-                <div class="card-meta">Medium</div>
-                <div class="card-desc">Architectural guide on leveraging monorepos to build and scale full-stack applications efficiently.</div>
+
+                <!-- DEV.to Box -->
+                <div class="platform-box">
+                    <div class="platform-title devto-title">
+                        DEV.to
+                    </div>
+                    <ul class="article-link-list">
+                        <li><a href="https://dev.to/siraj_syed_a122e4986ce967/part-3-exposing-clickhouse-as-an-embeddable-analytics-api-with-access-control-and-cost-1i54" class="article-link" target="_blank" rel="noopener">Exposing ClickHouse as an Embeddable Analytics API</a></li>
+                        <li><a href="https://dev.to/siraj_syed_a122e4986ce967/part-2-syncing-normalized-postgresql-data-to-denormalized-clickhouse-using-airbyte-dbt-2hic" class="article-link" target="_blank" rel="noopener">Syncing PostgreSQL to ClickHouse Using Airbyte + dbt</a></li>
+                        <li><a href="https://dev.to/siraj_syed_a122e4986ce967/designing-data-models-that-work-for-both-postgresql-and-clickhouse-a-developers-guide-3e4d" class="article-link" target="_blank" rel="noopener">Designing Data Models for PostgreSQL and ClickHouse</a></li>
+                    </ul>
+                </div>
+
+                <!-- DZone Box -->
+                <div class="platform-box">
+                    <div class="platform-title dzone-title">
+                        DZone
+                    </div>
+                    <ul class="article-link-list">
+                        <li><a href="https://dzone.com/articles/why-you-need-medallion-architecture-clickhouse" class="article-link" target="_blank" rel="noopener">Medallion Architecture: Implementation With ClickHouse</a></li>
+                        <li><a href="https://dzone.com/articles/monorepo-development-with-react-nodejs-and-postgre" class="article-link" target="_blank" rel="noopener">Monorepo Development With React, Node.js, and PostgreSQL</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://medium.com/@sirajsyed/simplifying-access-control-in-data-visualization-platforms-with-openfga-12345" target="_blank" rel="noopener">Simplifying Access Control in Data Visualization Platforms with OpenFGA</a></div>
-                    <span class="card-tag tag-publication">Medium</span>
-                </div>
-                <div class="card-meta">Medium</div>
-                <div class="card-desc">Technical deep dive into implementing fine-grained authorization (FGA) for enterprise data platforms.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://medium.com/@sirajsyed/how-to-manage-a-high-performer-without-holding-them-back-12345" target="_blank" rel="noopener">How to Manage a High Performer Without Holding Them Back</a></div>
-                    <span class="card-tag tag-publication">Medium</span>
-                </div>
-                <div class="card-meta">Medium</div>
-                <div class="card-desc">Leadership strategies for scaling high-performing engineering teams and empowering top talent.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://medium.com/@sirajsyed/is-computer-science-still-the-future-rethinking-careers-in-the-age-12345" target="_blank" rel="noopener">Is Computer Science Still the Future? Rethinking Careers in the Age of AI</a></div>
-                    <span class="card-tag tag-publication">Medium</span>
-                </div>
-                <div class="card-meta">Medium</div>
-                <div class="card-desc">Analysis on the evolution of software engineering careers and the impact of artificial intelligence on the industry.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/part-3-exposing-clickhouse-as-an-embeddable-analytics-api-with-access-control-and-cost-1i54" target="_blank" rel="noopener">Exposing ClickHouse as an Embeddable Analytics API</a></div>
-                    <span class="card-tag tag-publication">DEV.to</span>
-                </div>
-                <div class="card-meta">DEV.to</div>
-                <div class="card-desc">Designing an analytics API layer on top of ClickHouse with fine-grained access control and cost attribution.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/part-2-syncing-normalized-postgresql-data-to-denormalized-clickhouse-using-airbyte-dbt-2hic" target="_blank" rel="noopener">Syncing PostgreSQL to ClickHouse Using Airbyte + dbt</a></div>
-                    <span class="card-tag tag-publication">DEV.to</span>
-                </div>
-                <div class="card-meta">DEV.to</div>
-                <div class="card-desc">Production pipeline architecture for syncing normalized data to denormalized schemas.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dev.to/siraj_syed_a122e4986ce967/designing-data-models-that-work-for-both-postgresql-and-clickhouse-a-developers-guide-3e4d" target="_blank" rel="noopener">Designing Data Models for PostgreSQL and ClickHouse</a></div>
-                    <span class="card-tag tag-publication">DEV.to</span>
-                </div>
-                <div class="card-meta">DEV.to</div>
-                <div class="card-desc">Developer guide to designing data models across OLTP and OLAP paradigms.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dzone.com/articles/medallion-architecture-why-you-need-it-and-how-to" target="_blank" rel="noopener">Medallion Architecture: Implementation With ClickHouse</a></div>
-                    <span class="card-tag tag-publication">DZone</span>
-                </div>
-                <div class="card-meta">DZone</div>
-                <div class="card-desc">Structured approach to data pipelines alongside ClickHouse for real-time analytics.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dzone.com/articles/monorepo-development-with-react-nodejs-and-postgre" target="_blank" rel="noopener">Monorepo Development With React, Node.js, and PostgreSQL</a></div>
-                    <span class="card-tag tag-publication">DZone</span>
-                </div>
-                <div class="card-meta">DZone</div>
-                <div class="card-desc">Streamlining full-stack application development using monorepos.</div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <div class="card-title"><a href="https://dzone.com/articles/multi-cluster-networking-with-kubernetes-and-docke" target="_blank" rel="noopener">Multi-Cluster Networking With Kubernetes and Docker</a></div>
-                    <span class="card-tag tag-publication">DZone</span>
-                </div>
-                <div class="card-meta">DZone</div>
-                <div class="card-desc">Networking challenges and solutions within multi-cluster containerized environments.</div>
-            </div>
 
             <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
                 <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="hero-link" target="_blank" rel="noopener">Google Scholar →</a>
